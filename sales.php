@@ -1,11 +1,11 @@
 <?php
 	include('session.php');
     $sql = 'SELECT * FROM sales';
-	$result = mysqli_query($db,$sql); 
+	$result = mysqli_query($db,$sql);
 	$rows = array();
-	
+
 	while($row = mysqli_fetch_array($result)){
-    	$rows[] = $row;	
+    	$rows[] = $row;
 	}
 	include('inventoryAction.php');
 ?>
@@ -33,7 +33,7 @@
 					<li><a href="logout.php">Logout</a></li>
 				</ul>
 			</nav>
-		</div>	
+		</div>
 		<div id = "side-navagate-bar">
 			<div class = "toggle-btn" onclick="toggleSideBar()">
 				<span></span>
@@ -44,6 +44,7 @@
 				<li><h2 id="logo">Inventory Sales Management</h2></li>
 				<li><a href="sales.php">Sales</a></li>
 				<li><a href="inventory.php">Inventory</a></li>
+				<li><a href="feedback.php">Feedback</a></li>
 			</ul>
 		</div>
 
