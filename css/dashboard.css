@@ -5,7 +5,7 @@
 }
 
 body{
-	background: url(../img/background.gif);
+	background: url(../img/bg.jpg);
 }
 
 #side-navagate-bar {
@@ -52,7 +52,7 @@ body{
 
 #logo {
 	padding-left:2px;
-	font-family: "arial black";
+	font-family: "algerian";
 	color: #39ca74;
 }
 
@@ -229,9 +229,17 @@ body{
 	background-color: gainsboro;
 }
 
-
-
-
-
-
-
+  .fontsub{
+	  font-family: lucida handwriting;
+	  font-size:40;
+	  color:  white;
+  }
+  .fonthead{
+	  font-family: algerian;
+	  font-size: 70;
+  }
+  .box{
+	  padding: 10%;
+	  margin-left: 10%;
+  }
+  
