@@ -2,15 +2,14 @@
    	$error = "";
 
    	if($_SERVER["REQUEST_METHOD"] == "POST") {
-		$myComment = mysqli_real_escape_string($db,$_POST['comment']);
-		$hour = date('H');
-		$minute = date('i');
-		$date = date('d');
-		$month = date('m');
-		$year = date('Y');
+		$eid =
+    $ename =
+		$issue =
+    $issuedet =
+		$date =
       	if(isset($_POST['submit'])){
-	      	$sql = "INSERT INTO comment (comment, hour, minute, date, month, year)
-	   		VALUES ('$myComment', '$hour', '$minute', '$date', '$month', '$year')";
+	      	$sql = "INSERT INTO feedback (eid, ename, issue, issuedet, date)
+	   		VALUES ('$eid', '$ename', '$issue', '$issuedet', '$date' )";
 	   		if ($db->query($sql) === TRUE) {
 				$message = "New record created successfully";
 				header("comment.php");
