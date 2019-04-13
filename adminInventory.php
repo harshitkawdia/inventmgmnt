@@ -66,7 +66,7 @@
 
 		<div id="main-area">
 			<div id="welcome">
-				<h1 class="fonthead text-dark">Welcome <?php echo $login_session; ?></h1>
+				<h1 class="fonthead text-light">Welcome <?php echo $login_session; ?></h1>
 					
 
 					<div class="row">						
@@ -75,7 +75,9 @@
 						  <div class="shadow p-4 mb-4 rounded-lg">
 						  <!-- small box -->
 							<div class="info-box bg-info text-body img-rounded">
-							<h1><a href="inventory.php" ><span class="info-box-icon"><img src="img/available.png"></i></span></a></h1>
+							<div>
+								<h1><a href="inventory.php" ><span class="info-box-icon"><img src="img/available.png"></i></span></a></h1>
+							</div>
 								<div class="info-box-content">
 									<h1> 
 										<a href="inventory.php" class="text-light fontsub box">Current Stock</a>
@@ -89,7 +91,9 @@
 						  <div class="shadow p-4 mb-4 rounded-lg">
 						  <!-- small box -->
 							<div class="info-box bg-warning text-body img-rounded">
-							<h1><a href="inventory.php" ><span class="info-box-icon"><img src="img/order.png"></i></span></a></h1>
+							<div>
+								<h1><a href="inventory.php" ><span class="info-box-icon"><img src="img/order.png"></i></span></a></h1>
+							</div>
 								<div class="info-box-content">
 									<h1> 
 										<a href="inventory.php" class="text-light fontsub box">Order Placed</a>
@@ -104,7 +108,9 @@
 						  <div class="shadow p-4 mb-4 rounded-lg">
 						  <!-- small box -->
 							<div class="info-box bg-danger text-body img-rounded">
-							<h1><a href="inventory.php" ><span class="info-box-icon centre-block font" ><img src="img/deprecated.png"></span></a></h1>
+							<div>
+								<h1><a href="inventory.php" ><span class="info-box-icon centre-block font" ><img src="img/deprecated.png"></span></a></h1>
+							</div>
 								<div class="info-box-content">
 									<h1> 
 										<a href="inventory.php" class="text-light fontsub box">Deprecated Stock</a>
