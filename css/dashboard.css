@@ -230,20 +230,16 @@ body{
 }
 
   .fontsub{
-	  font-family: arial;
+	  font-family: lucida handwriting;
 	  font-size:40;
+	  color:  white;
   }
   .fonthead{
 	  font-family: algerian;
 	  font-size: 70;
-	  color: dark;
   }
   .box{
 	  padding: 10%;
+	  margin-left: 10%;
   }
   
-
-
-
-
-

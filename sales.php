@@ -1,12 +1,4 @@
 <?php
-
-
-include('start.php');
-
-?>
-
-
-<?php
 	include('session.php');
     $sql = 'SELECT * FROM sales';
 	$result = mysqli_query($db,$sql); 
@@ -16,7 +8,6 @@ include('start.php');
     	$rows[] = $row;	
 	}
 	include('inventoryAction.php');
-	
 ?>
 
 <html>
@@ -38,7 +29,7 @@ include('start.php');
 	</head>
 
 	<body>
-	<!---	<div id="top-bar">
+		<div id="top-bar">
 			<nav>
 				<ul>
 					<li><a href="dashboard.php">Home</a></li>
@@ -62,7 +53,7 @@ include('start.php');
 		</div>
 
 		<div id="block">
--->
+
 		<div id="main-area">
 			<div id="welcome">
 				<h1>Welcome <?php echo $login_session; ?></h1>
