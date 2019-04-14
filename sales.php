@@ -49,8 +49,7 @@
 				<li><h2 id="logo">Lab Stock Management</h2></li>
 				<li><a href="sales.php">Sales</a></li>
 
-=======
-				<li><a href="adminInventory.php">Inventory</a></li>
+		<li><a href="adminInventory.php">Inventory</a></li>
 
 			</ul>
 		</div>
