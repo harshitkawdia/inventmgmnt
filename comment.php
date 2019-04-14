@@ -1,8 +1,8 @@
 <?php
 	include('session.php');
 	include('commentAction.php');
-    $sql = 'SELECT * FROM comment';
-	$CommentResult = mysqli_query($db,$sql); 
+    $sql = 'SELECT * FROM feedback';
+	$CommentResult = mysqli_query($db,$sql);
 	$CommentRows = array();
 	while($row = mysqli_fetch_array($CommentResult)){
     	$CommentRows[] = $row;
@@ -30,11 +30,11 @@
 				<li><a href="reference.php" target="_blank">About</a></li>
 				<li><a href="logout.php">Logout</a></li>
 			</ul>
-			
-			
+
+
 		</nav>
-	</div>	
-		
+	</div>
+
 
 		<div id = "side-navagate-bar">
 			<div class = "toggle-btn" onclick="toggleSideBar()">
@@ -42,13 +42,13 @@
 				<span></span>
 				<span></span>
 			</div>
-			
+
 			<ul>
 				<li><h2 id="logo">Inventory Sales Management</h2></li>
 				<li><a href="sales.php">Sales</a></li>
 				<li><a href="inventory.php">Inventory</a></li>
 			</ul>
-			
+
 		</div>
 
 	<div id="block">
@@ -59,27 +59,27 @@
 			<div id="title">
 				<h1>Message Board</h1>
 			</div>
-			
-			
+
+
 			<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
-				
+
 				<div id="Tasks_Panel-info">
-			
+
 					<h1 id = "me"></h1>
 					<div id="comment"></div>
-				</div>	
-				
+				</div>
+
 				<div class= "submit">
 					<div id="in">
-						<textarea class ="comment" type="text" name="comment" required></textarea>	
+						<textarea class ="comment" type="text" name="comment" required></textarea>
 					</div>
-					<div id="sub-btn">	
+					<div id="sub-btn">
 						<button name="submit">submit</button>
 					</div>
 				</div>
 			</form>
 		</div>
 	</div>
-	
+
 	</body>
 </html>
