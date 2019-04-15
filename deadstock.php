@@ -66,120 +66,123 @@
 			<div id="main-area">
             <div>
 				<h1 class="card-title fonthead text-light" style="text-align:center ">Dead Stock</h1>
-			</div>
-				<div id="addItem">
-					<button id="editBtn" onclick="edit()">Edit</button>
-					<button id="addBtn" class="Btn">Add Item</button>
-					<button id="addBtn" class="Btn">Delete Item</button>
-					<button id="updateBtn" class="Btn">Update Sale</button>
-					<form id="submit" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
-						<div id="addModal" onclick="model()" class="modal">
-							<div class="modal-content">
-    							<span class="close">&times;</span>
-								<div class="modal-body">
-									<table>	
-										<tr><td>Item Name: </td><td><input type="text" placeholder="itemName" name="item"></td></tr>
-										<tr><td>#In-Stock: </td><td><input type="text" placeholder="storage" name="storage"></td></tr>
-										<tr><td>Unit Price: </td><td><input type="text" placeholder="unitPrice" name="unitPrice"></td></tr>
-										<tr><td>Sell Price: </td><td><input type="text" placeholder="sellPrice" name="sellPrice"></td></tr>
-										<tr><td>Date: </td><td><input type="date" placeholder="date" name="date"></td></tr>
-									</table>
-									<br>
-									<button id="addBtn" name="add">Add</button>
-								</div>
-							</div>
-						</div>
-						<div>
-							<?php echo $message; ?>
-						</div>
-						<div id="deleteModal" onclick="model()" class="modal">
-							<div class="modal-content">
-    							<span class="close">&times;</span>
-								<div class="modal-body">
-									<table>	
-										<tr><td>Item ID: </td><td><input type="text" placeholder="itemId" name="itemId"></td></tr>
-									</table>
-									<br>
-									<button id="addBtn" name="delete">Delete</button>
-								</div>
-							</div>
-						</div>
-						<div>
-						</div>
-					</form>
-				</div>
+            </div>
+
+            <div class="container">
+				<!-- /.row -->
+				  <div class="row">
+            <div class="col-12">
+              <div class="card">
+                <div class="card-header">
+                  <h3 class="card-title">User Details</h3>
+
+                  <div class="card-tools">
+                    <div class="input-group input-group-sm" style="width: 150px;">
+                      <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+
+                      <div class="input-group-append">
+                        <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- /.card-header -->
+                <div class="card-body table-responsive ">
+                  <table class="table table-hover">
+                    <tr>
+                      <th>UserID</th>
+                      <th>User Name</th>
+                      <th>User Type</th>
+                      <th>User Email</th>
+                      <th>Department</th>        
+                      <th>More</th>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>admin</td>
+                      <td>admin</td>
+                      <td>admin@gmail.com</td>
+                      <td>admin</td>
+                      <td>
+                        <button type="button" class="btn btn-primary">
+                          More
+                        </button>
+                    
+                      <td>
+                    </tr>
+                    <tr>
+                  </table>
+                </div>
+                <!-- /.card-body -->
+              </div>
+              <!-- /.card -->
+            </div>
+		</div><!-- /.row -->
+  </div>
+
+</div>
+			
+  <div class="container">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addNew">
+ 	        Add New
+        </button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addNew">
+ 	        Edit
+        </button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addNew">
+ 	        Delete
+        </button>
+  </div> 
+</div>
+          <div class="modal fade" id="addNew" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog ">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title"id="exampleModalLabel">New User</h4>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span></button>
+                
+              </div>
+              <form action="" method="post">
+                
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="userid">UserId</label>
+                            <input type="text" name="userid" id="userid"
+                             placeholder="UserId" class="form-control" >
+                        </div>
+                        <div class="form-group">
+                            <label for="username">UserName</label>
+                            <input type="text" name="username" id="username"
+                             placeholder="UserName" class="form-control" >
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email"
+                             placeholder="example@example.com" class="form-control" >
+                        </div>
+                        <div class="form-group">
+                            <label for="usertype">UserType</label>
+                            <select name="usertype" id="usertype" class="form-control">
+                              <option value="">Select User Role</option>
+                              <option value="1">Admin</option>
+                              <option value="2">User</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Save</button>
+                    </div>
+                </form>
+             </div>
+            <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+          </div>
+          <!-- /.modal -->
+
 				
-				<br>
-				
-				<form id="submit" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
-					<div id="Product_Panel">
-						<button name="edit" id="editBtn">Submit Change</button>
-						<div id="updateModal" onclick="model()" class="modal">
-							<div class="modal-content">
-								<span class="close">&times;</span>
-								<div class="modal-body">
-									<table>
-										<tr><td>Item Id: </td><td><input type="text" placeholder="itemId" name="itemId"></td></tr>
-										<tr><td>Item Name: </td><td><input type="text" placeholder="itemName" name="item"></td></tr>
-										<tr><td>Quantity: </td><td><input type="text" placeholder="quantity" name="quantity"></td></tr>
-										<tr><td>Date: </td><td><input type="date" placeholder="date" name="date"></td></tr>
-									</table>
-									<br>
-									<button id="editBtn" name="updateSale">Update Sale</button>
-								</div>
-							</div>
-						</div>
-						<div>
-						</div>
-						<br>
-					</div>	
-				</form>
-				
-				
-				<script>
-					// Get the modal
-					var modal = document.getElementsByClassName("modal");
-					
-					// Get the button that opens the modal
-					var btn = document.getElementsByClassName("Btn");
-					
-					// Get the <span> element that closes the modal
-					var span = document.getElementsByClassName("close");
-					
-					// When the user clicks the button, open the modal 
-					btn[0].onclick = function() {
-					    modal[0].style.display = "block";
-					}
-					
-					btn[1].onclick = function() {
-					    modal[1].style.display = "block";
-					}
-					
-					btn[2].onclick = function() {
-					    modal[2].style.display = "block";
-					}
-					
-					
-					// When the user clicks on <span> (x), close the modal
-					span[0].onclick = function() {
-					    modal[0].style.display = "none";
-					}
-					
-					span[1].onclick = function() {
-					    modal[1].style.display = "none";
-					}
-					
-					span[2].onclick = function() {
-					    modal[2].style.display = "none";
-					}
-					
-					// When the user clicks anywhere outside of the modal, close it
-					window.onclick = function(event) {
-					    if (event.target == modal) {
-					        modal.style.display = "none";
-					    }
-					}
-				</script>
 			</div>
 		</div>
 	</body>

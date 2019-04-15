@@ -80,7 +80,7 @@
 
                         <button class="btn btn-success" id="editBtn" data-toggle="modal" 
                             data-target="#addNewModalLabel" onclick="edit()">Edit Stock 
-                            <i class="fa fa-user-plus fa-fw"></i>
+                            <i class="fa fa-pen-square fa-fw"></i>
                         </button>
 
                     </div>
@@ -94,29 +94,29 @@
     							<span class="close">&times;</span>
 								<div class="modal-body">
 									<table>	
-                                        <tr><td>User ID: </td><td><input type="text" placeholder="storage" name="storage"></td></tr>
+                                        <tr><td>User ID: </td><td><input type="text" placeholder="User ID" name="storage"></td></tr>
 										<tr><td>Item Name: </td><td><input type="text" placeholder="itemName" name="item"></td></tr>
 										<tr><td>Unit Price: </td><td><input type="text" placeholder="unitPrice" name="unitPrice"></td></tr>
 										<tr><td>Sell Price: </td><td><input type="text" placeholder="sellPrice" name="sellPrice"></td></tr>
-										<tr><td>Date: </td><td><input type="date" placeholder="date" name="date"></td></tr>
+										<tr><td>Issued On: </td><td><input type="date" placeholder="date" name="date"></td></tr>
 									</table>
 									<br>
-									<button id="addBtn" name="add">Add</button>
+									<button id="addBtn" name="add">Add Stock</button>
 								</div>
 							</div>
 						</div>
 						<div>
 							<?php echo $message; ?>
 						</div>
-						<div id="deleteModal" onclick="model()" class="modal">
-							<div class="modal-content">
+						<div id="deleteModal" onclick="model()" class="modal container-fluid">
+							<div class="modal-content ">
     							<span class="close">&times;</span>
 								<div class="modal-body">
 									<table>	
 										<tr><td>Item ID: </td><td><input type="text" placeholder="itemId" name="itemId"></td></tr>
 									</table>
 									<br>
-									<button id="addBtn" name="delete">Delete</button>
+									<button id="addBtn" name="delete">Remove Stock</button>
 								</div>
 							</div>
 						</div>
