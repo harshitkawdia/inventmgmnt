@@ -17,7 +17,8 @@ function createTable(){
 	username VARCHAR(255) NOT NULL,
 	password VARCHAR(255) NOT NULL,
 	user_type integer NOT NULL,
-	email VARCHAR(255) NOT NULL
+	email VARCHAR(255) NOT NULL,
+	dept VARCHAR(255) NOT NULL
 	)";
 	$conn->query($sql);
 	

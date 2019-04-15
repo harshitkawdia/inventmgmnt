@@ -93,10 +93,6 @@
 						<img src="img/chat.png" />
 					</div>
 					
-					<div id="mini_board">
-						<div class = "mini_font"><a href="#">Profile</a></div>
-						<?php echo '<img src="' . $avatar . '"/>';?>
-					</div>
 				</div>
 				
 				<div id="first_row">

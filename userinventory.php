@@ -52,15 +52,15 @@
 			</div>
 			<ul>
 				<li><h2 id="logo">Lab Stock Management</h2></li>
-				<li><a href="sales.php">Sales</a></li>
+				<li><h6 class="fontsub text-light">Welcome <?php echo $login_session; ?></h6></li>
 				<li><a href="userinventory.php">User Inventory</a></li>
 			</ul>
 		</div>
 		<div id="block">
 			<div id="main-area">
-				<div id="welcome">
-					<h1 class="fonthead text-light">Welcome <?php echo $login_session; ?></h1>
-				</div>			
+			<div>
+				<h1 class="card-title fonthead text-light" style="text-align:center ">Current Stock</h1>
+			</div>				
 				
 			
 <div class="container">
@@ -68,7 +68,7 @@
 		<div class="col-12">
 			<div class="card">
 				<div class="card-header">
-					<h3 class="card-title" style="text-align:center ">Current Stock</h3>
+					
 
 					<!--<div class="card-tools">
 						<button id="addBtn" class="btn btn-success" data-toggle="modal" 
