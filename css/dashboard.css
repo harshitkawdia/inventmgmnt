@@ -5,22 +5,24 @@
 }
 
 body{
-	background: url(../img/background.gif);
+	background: url(../img/bg.jpg);
+	background-repeat: no-repeat;
 }
 
 #side-navagate-bar {
 	position: fixed;
-	width:200px;
+	width:225px;
 	height: 100%;
 	background: #151719;
 	left:0px;
 	transition: all 500ms linear;
 	top: 0px;
 	z-index: 3;
+	max-height: 1438px;
 }
 
 #side-navagate-bar.active {
-	left:-200px;
+	left:-225px;
 }
 
 #side-navagate-bar ul li{
@@ -44,7 +46,7 @@ body{
 
 #side-navagate-bar .toggle-btn span {
 	display: block;
-	width: 30px;
+	width: 35px;
 	height: 5px;
 	background: #ffffff;
 	margin:3px 0px;
@@ -52,7 +54,7 @@ body{
 
 #logo {
 	padding-left:2px;
-	font-family: "arial black";
+	font-family: "algerian";
 	color: #39ca74;
 }
 
@@ -140,7 +142,7 @@ body{
 	margin-top: 20px;
 }
 
-#mini_nav img{
+#mini_nav {
 	height: 75px;
 	width: 75px;
 	float: right;
@@ -229,9 +231,29 @@ body{
 	background-color: gainsboro;
 }
 
-
-
-
-
-
-
+  .fontsub{
+	  font-family: arial;
+	  font-size:30;
+	  color:  whitesmoke;
+  }
+  .fonthead{
+	  font-family: broadway;
+	  font-size: 70;
+  }
+  .box{
+	  padding: 1%;
+	  margin: 2.5%;
+  }
+  .maindiv{
+  	  padding: 3%;
+	  margin: 5%;
+  }
+  img{
+	height: 60px;
+	width: 60px;
+	float: right;
+	margin: 2.5%;
+}
+.cell{
+padding: 5%;
+}

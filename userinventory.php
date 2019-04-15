@@ -1,6 +1,6 @@
 <?php
 	include('session.php');
-    $sql = 'SELECT * FROM product';
+    $sql = 'SELECT * FROM sales';
 	$result = mysqli_query($db,$sql); 
 	$rows = array();
 	
@@ -13,19 +13,24 @@
 <html>
 
 	<head>
-		<title>Inventory</title>
+		<title>User Inventory</title>
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
+		
+		<link rel="stylesheet" type="text/css" href="css/ionicons.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 		<link rel="stylesheet" type="text/css" href="css/dashboard.css">
-		<link rel="stylesheet" type="text/css" href="css/inventory.css">
+		<link rel="stylesheet" type="text/css" href="css/sales.css">
 		<script type="text/javascript">
 			var products = <?php echo json_encode( $rows ) ?>;
 		</script>
 		<script src="js/dashboard.js"></script>
-		<script src="js/inventory.js"></script>
+		<script src="js/sales.js"></script>
 	</head>
 
 	<body>
@@ -48,88 +53,78 @@
 			<ul>
 				<li><h2 id="logo">Lab Stock Management</h2></li>
 				<li><a href="sales.php">Sales</a></li>
-				<li><a href="adminInventory.php">Admin Inventory</a>
-					<ul><br>	
-					<li><a href="inventory.php">Current Stock</a></li>
-					<li><a href="inventory.php">Order Placed</a></li>
-					<li><a href="inventory.php">Deprecated Stock</a></li>
-					</ul>
-				</li>
+				<li><a href="userinventory.php">User Inventory</a></li>
 			</ul>
 		</div>
-
 		<div id="block">
 			<div id="main-area">
 				<div id="welcome">
-					<h1>Welcome <?php echo $login_session; ?></h1>
-				</div>
-				<div id="addItem">
-					<button id="editBtn" onclick="edit()">Edit</button>
-					<button id="addBtn" class="Btn">Add Item</button>
-					<button id="addBtn" class="Btn">Delete Item</button>
-					<button id="updateBtn" class="Btn">Update Sale</button>
-					<form id="submit" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
-						<div id="addModal" onclick="model()" class="modal">
-							<div class="modal-content">
-    							<span class="close">&times;</span>
-								<div class="modal-body">
-									<table>	
-										<tr><td>Item Name: </td><td><input type="text" placeholder="itemName" name="item"></td></tr>
-										<tr><td>#In-Stock: </td><td><input type="text" placeholder="storage" name="storage"></td></tr>
-										<tr><td>Unit Price: </td><td><input type="text" placeholder="unitPrice" name="unitPrice"></td></tr>
-										<tr><td>Sell Price: </td><td><input type="text" placeholder="sellPrice" name="sellPrice"></td></tr>
-										<tr><td>Date: </td><td><input type="date" placeholder="date" name="date"></td></tr>
-									</table>
-									<br>
-									<button id="addBtn" name="add">Add</button>
-								</div>
-							</div>
-						</div>
-						<div>
-							<?php echo $message; ?>
-						</div>
-						<div id="deleteModal" onclick="model()" class="modal">
-							<div class="modal-content">
-    							<span class="close">&times;</span>
-								<div class="modal-body">
-									<table>	
-										<tr><td>Item ID: </td><td><input type="text" placeholder="itemId" name="itemId"></td></tr>
-									</table>
-									<br>
-									<button id="addBtn" name="delete">Delete</button>
-								</div>
-							</div>
-						</div>
-						<div>
-						</div>
-					</form>
-				</div>
+					<h1 class="fonthead text-light">Welcome <?php echo $login_session; ?></h1>
+				</div>			
 				
-				<br>
+			
+<div class="container">
+	<div class="row">
+		<div class="col-12">
+			<div class="card">
+				<div class="card-header">
+					<h3 class="card-title" style="text-align:center ">Current Stock</h3>
+
+					<!--<div class="card-tools">
+						<button id="addBtn" class="btn btn-success" data-toggle="modal" 
+                  				data-target="#addNewModal">Add 
+                  				<i class="fa fa-user-plus fa-fw"></i>
+						</button>
+	
+
+						<button class="btn btn-success" data-toggle="modal" 
+                  				data-target="#updateNewModal">Update 
+                  				<i class="fa fa-user-plus fa-fw"></i>
+						</button>
+
+						<button class="btn btn-danger" data-toggle="modal" 
+                  				data-target="#deleteNewModal">Delete 
+                  				<i class="fa fa-user-plus fa-fw"></i>
+						</button>
+
+						<button class="btn btn-primary " style="margin-left:72%" data-toggle="modal" 
+                  				data-target="#updateNewModal">Submit 
+                  				<i class="fa fa-user-plus fa-fw"></i>
+						</button>
+
+					</div>-->
+				</div>
+				<!-- /.card-header -->
+				<div class="card-body table-responsive p-0">
+					<table class="table table-hover">
+						<tr>
+							<th>User ID</th>
+							<th>User Name</th>
+							<th>Eq. Id</th>
+							<th>Eq. Details</th>
+							<th>Issued By</th>
+							<th>Assigned on</th>
+							<th>Issues Raised</th>
+						</tr>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th><button type="button" class="btn btn-success" onclick="feedback.php">Feedback</button></th>
+						<tr>
+							
+						<tr>
 				
-				<form id="submit" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
-					<div id="Product_Panel">
-						<button name="edit" id="editBtn">Submit Change</button>
-						<div id="updateModal" onclick="model()" class="modal">
-							<div class="modal-content">
-								<span class="close">&times;</span>
-								<div class="modal-body">
-									<table>
-										<tr><td>Item Id: </td><td><input type="text" placeholder="itemId" name="itemId"></td></tr>
-										<tr><td>Item Name: </td><td><input type="text" placeholder="itemName" name="item"></td></tr>
-										<tr><td>Quantity: </td><td><input type="text" placeholder="quantity" name="quantity"></td></tr>
-										<tr><td>Date: </td><td><input type="date" placeholder="date" name="date"></td></tr>
-									</table>
-									<br>
-									<button id="editBtn" name="updateSale">Update Sale</button>
-								</div>
-							</div>
+						</table>
 						</div>
-						<div>
+						<!-- /.card-body -->
 						</div>
-						<br>
-					</div>	
-				</form>
+						<!-- /.card -->
+						</div>
+						</div><!-- /.row -->
+						</div>
 				
 				
 				<script>
@@ -177,6 +172,12 @@
 					}
 				</script>
 			</div>
+
+			</div>
+		</div>
+				
+			</div>
 		</div>
 	</body>
+
 </html>

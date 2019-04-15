@@ -60,10 +60,9 @@
 			</div>
 			
 			<ul>
-				<li><h2 id="logo">Inventory Sales Management</h2></li>
-				<li><a href="sales.php">Sales</a></li>
-				<li><a href="adminInventory.php">Inventory</a></li>
-				<li><a href="users.php">User Details</a></li>
+				<li><h2 id="logo">Lab Stock Management</h2></li>
+				<li><a href="userinventory.php">User Inventory</a></li>
+				<li><a href="userinventory.php">Issue Raised</a></li>
 			
 			</ul>
 			
