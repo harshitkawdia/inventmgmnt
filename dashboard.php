@@ -94,11 +94,16 @@
 						<div class = "mini_font"><a href="comment.php">OnBoard</a></div>
 						<img src="img/chat.png" />
 					</div>
+<<<<<<< HEAD
 
 					<div id="mini_board">
 						<div class = "mini_font"><a href="#">Profile</a></div>
 						<?php echo '<img src="' . $avatar . '"/>';?>
 					</div>
+=======
+					
+					
+>>>>>>> 26eb7b13c6dbe026ad9dcb400fb74798542e8e09
 				</div>
 
 				<div id="first_row">
