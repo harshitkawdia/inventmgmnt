@@ -7,22 +7,22 @@ function createDatabase(){
 	// Create database
 	$sql = "CREATE DATABASE mydb";
 	$conn->query($sql);
-	$conn->close();	
+	$conn->close();
 }
 
 function createTable(){
 	$conn = new mysqli('localhost', 'root', '','mydb');
 	$sql = "CREATE TABLE user (
-	id FLOAT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
+	id FLOAT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 	username VARCHAR(255) NOT NULL,
 	password VARCHAR(255) NOT NULL,
 	user_type integer NOT NULL,
 	email VARCHAR(255) NOT NULL
 	)";
 	$conn->query($sql);
-	
+
 	$sql = "CREATE TABLE product (
-	id FLOAT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
+	id FLOAT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 	item VARCHAR(100) NOT NULL,
 	storage FLOAT(10),
 	unitPrice FLOAT(10),
@@ -34,7 +34,7 @@ function createTable(){
 	$conn->query($sql);
 
 	$sql = "CREATE TABLE comment (
-	id FLOAT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
+	id FLOAT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 	comment VARCHAR(10000) NOT NULL,
 	hour VARCHAR(255) NOT NULL,
 	minute VARCHAR(255) NOT NULL,
@@ -43,14 +43,14 @@ function createTable(){
 	year VARCHAR(255) NOT NULL
 	)";
 	$conn->query($sql);
-	
+
 	$sql = "CREATE TABLE sales (
 	id FLOAT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 	itemId int(11),
 	item VARCHAR(100) NOT NULL,
 	quantity int(10),
 	cost int(10),
-	revenue int(10), 	
+	revenue int(10),
 	profit int(10),
 	date FLOAT(10),
 	month FLOAT(10),
@@ -58,7 +58,22 @@ function createTable(){
 	)";
 	$conn->query($sql);
 
-	$conn->close();	
+
+   $sql=	"CREATE TABLE feedback (
+	  issuepriority varchar(200) NOT NULL,
+	  name varchar(50) NOT NULL,
+	  itemcode int(10) NOT NULL,
+	  issuetitle varchar(100) NOT NULL,
+	  issuedetail varchar(500) NOT NULL,
+	  date date NOT NULL
+	)";
+
+
+
+
+
+
+	$conn->close();
 }
 
 function createAdmin(){
@@ -66,12 +81,12 @@ function createAdmin(){
 	$result = mysqli_query($conn,"SELECT * FROM user WHERE id = '1'");
 	$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
 	$count = mysqli_num_rows($result);
-	// If result matched username, table row must be 1 row		
+	// If result matched username, table row must be 1 row
 	if($count == 0) {
 		$sql = "INSERT INTO user (username, password, user_type, email)
 	   	VALUES ('admin', 'admin',1,'admin@gmail.com')";
 		$conn->query($sql);
-		
+
 		$hour = date('H');
 		$minute = date('i');
 		$date = date('d');
@@ -83,20 +98,20 @@ function createAdmin(){
 		$sql = "INSERT INTO comment (comment, hour, minute, date, month, year)
 	   		VALUES ('item shipped.', '$hour', '$minute', '$date', '$month', '$wrongYear')";
 		$conn->query($sql);
-		
+
 		$sql = "INSERT INTO comment (comment, hour, minute, date, month, year)
 	   		VALUES ('500 apple sells.', '$hour', '$minute', '$date', '$wrongMonth', '$year')";
 		$conn->query($sql);
-		
+
 		$sql = "INSERT INTO comment (comment, hour, minute, date, month, year)
 	   		VALUES ('I eat 200 pears.', '$hour', '$minute', '$wrongDate', '$month', '$year')";
 		$conn->query($sql);
-		
+
 		$sql = "INSERT INTO comment (comment, hour, minute, date, month, year)
 	   		VALUES ('this is demo.', '$hour', '$minute', '$date', '$month', '$year')";
 		$conn->query($sql);
 	}
-	$conn->close();	
+	$conn->close();
 	$filename = "img/avatar";
 	if (!file_exists($filename)) {
 		mkdir($filename, 0700);
