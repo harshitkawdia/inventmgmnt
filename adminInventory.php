@@ -53,11 +53,11 @@
 			<ul>
 				<li><h2 id="logo">Lab Stock Management</h2></li>
 				<li><a href="sales.php">Sales</a></li>
-				<li><a href="inventory1.php">Admin Inventory</a></li>
+				<li><a href="admininventory.php">Admin Inventory</a></li>
 					<ul><br>	
 					<li><a href="inventory.php">Current Stock</a></li>
 					<li><a href="inventory.php">Order Placed</a></li>
-					<li><a href="inventory.php">Deprecated Stock</a></li>
+					<li><a href="inventory.php">Dead Stock</a></li>
 					</ul>
 			</ul>
 		</div>
@@ -113,7 +113,7 @@
 							</div>
 								<div class="info-box-content">
 									<h1> 
-										<a href="inventory.php" class="text-light fontsub box">Deprecated Stock</a>
+										<a href="inventory.php" class="text-light fontsub box">Dead Stock</a>
 									</h1>
 								</div>
 							</div>

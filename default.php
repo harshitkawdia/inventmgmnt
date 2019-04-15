@@ -16,7 +16,8 @@ function createTable(){
 	id FLOAT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
 	username VARCHAR(255) NOT NULL,
 	password VARCHAR(255) NOT NULL,
-	avatar VARCHAR(255) NOT NULL
+	user_type integer NOT NULL,
+	email VARCHAR(255) NOT NULL
 	)";
 	$conn->query($sql);
 	
@@ -67,8 +68,8 @@ function createAdmin(){
 	$count = mysqli_num_rows($result);
 	// If result matched username, table row must be 1 row		
 	if($count == 0) {
-		$sql = "INSERT INTO user (username, password, avatar)
-	   	VALUES ('admin', 'admin','img/admin.png')";
+		$sql = "INSERT INTO user (username, password, user_type,email)
+	   	VALUES ('admin', 'admin',1,'admin@gmail.com')";
 		$conn->query($sql);
 		
 		$hour = date('H');

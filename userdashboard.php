@@ -62,7 +62,7 @@
 			<ul>
 				<li><h2 id="logo">Inventory Sales Management</h2></li>
 				<li><a href="sales.php">Sales</a></li>
-				<li><a href="adminInventory.php">Admin Inventory</a></li>
+				<li><a href="userinventory.php"> User Inventory</a></li>
 			</ul>
 			
 		</div>
