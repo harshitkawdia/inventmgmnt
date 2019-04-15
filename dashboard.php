@@ -94,6 +94,7 @@
 						<img src="img/chat.png" />
 					</div>
 					
+
 				</div>
 				
 				<div id="first_row">
