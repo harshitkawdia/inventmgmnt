@@ -1,21 +1,21 @@
 <?php
 	include('session.php');
     $sql = 'SELECT * FROM product';
-	$result = mysqli_query($db,$sql); 
+	$result = mysqli_query($db,$sql);
 	$rows = array();
 	while($row = mysqli_fetch_array($result)){
     	$rows[] = $row;
 	}
-	
+
 	$sql = 'SELECT * FROM comment';
-	$CommentResult = mysqli_query($db,$sql); 
+	$CommentResult = mysqli_query($db,$sql);
 	$CommentRows = array();
 	while($row = mysqli_fetch_array($CommentResult)){
     	$CommentRows[] = $row;
 	}
-	
+
 	$sql = 'SELECT * FROM sales';
-	$salesResult = mysqli_query($db,$sql); 
+	$salesResult = mysqli_query($db,$sql);
 	$salesRows = array();
 	while($row = mysqli_fetch_array($salesResult)){
     	$salesRows[] = $row;
@@ -46,81 +46,102 @@
 					<li><a href="reference.php" target="_blank">About</a></li>
 					<li><a href="logout.php">Logout</a></li>
 				</ul>
-				
-				
+
+
 			</nav>
-		</div>	
-			
-	
+		</div>
+
+
 		<div id = "side-navagate-bar">
 			<div class = "toggle-btn" onclick="toggleSideBar()">
 				<span></span>
 				<span></span>
 				<span></span>
 			</div>
-			
+
 			<ul>
 				<li><h2 id="logo">Inventory Sales Management</h2></li>
 				<li><a href="sales.php">Sales</a></li>
 				<li><a href="adminInventory.php">Inventory</a></li>
 				<li><a href="users.php">User Details</a></li>
-			
+
 			</ul>
-			
+
 		</div>
-	
-	
+
+
 		<div id="block">
-	
+
 			<div id="main-area">
-				
+
+
 				<div id="welcome">
-					<h1>Welcome <?php echo $login_session; ?></h1>	
+					<h1>Welcome <?php echo $login_session; ?></h1>
 				</div>
-				
+
 				<div id="mini_nav">
 					<div id="mini_board">
 						<div class = "mini_font"><a href="sales.php">Sales</a></div>
 						<img src="img/sales.png"/>
 					</div>
-					
+
 					<div id="mini_board">
 						<div class = "mini_font"><a href="inventory.php">Income</a></div>
 						<img src="img/income.png"/>
 					</div>
-					
+
 					<div id="mini_board">
 						<div class = "mini_font"><a href="comment.php">OnBoard</a></div>
 						<img src="img/chat.png" />
 					</div>
-					
+
 					<div id="mini_board">
 						<div class = "mini_font"><a href="#">Profile</a></div>
 						<?php echo '<img src="' . $avatar . '"/>';?>
 					</div>
 				</div>
-				
+
 				<div id="first_row">
 					<div id="linechar">
 						<canvas id="canvas" ></canvas>
 					</div>
 					<div id="barchar">
 						<canvas id="canvas1" ></canvas>
+
 					</div>
 				</div>
-				
-				
+
+
 				<div id="second_row">
 					<div id="Tasks_Panel">
-						<h4>Tasks Panel</h4>
-						<h4>     </h4>
 						<div id="message"> </div>
+						<?php
+		
+echo  '<div class="panel"><div class="table-responsive"><table class="table table-striped title1">
+<tr><td><b>S.N.</b></td><td><b>Topic</b></td><td><b>Total question</b></td><td><b>Marks</b></td><td><b>Time limit</b></td><td></td></tr>';
+
+						 ?>
 					</div>
+
+
+
 				</div>
-				
-			</div>	
+
+			</div>
 		</div>
-			
+
+
+
+
+
+
+
+
+
+
+
+
+
 		<script>
 			var myDate = new Date();
 			var month=new Array('Jan','Feb', 'Mar', 'April', 'May', 'Jun', 'Jul', 'Aug','Sep', 'Oct', 'Nov','Dec');
@@ -128,10 +149,10 @@
 			var setMonth = myDate.getMonth();
 			setMonth += 12;
 			var valueMonth=monthNumber[myDate.getMonth()];
-		
-		
+
+
 			var one = 0, two = 0, three = 0, four = 0, five = 0, six = 0, seven = 0, eight = 0, nine = 0, ten = 0, elev = 0, twel = 0;
-		
+
 		// get cost
 			for(var i = sales.length-1; i >= 0 ; i--) {
 
@@ -143,7 +164,7 @@
 						twel+= parseFloat(sales[i][4]);
 					}
 				}
-				
+
 				if(sales[i][8] == monthNumber[((setMonth - 1) % 12)] ) {
 					if(valueMonth - monthNumber[(setMonth - 1) % 12] >= 0 && sales[i][9] == myDate.getFullYear()) {
 						elev+= parseFloat(sales[i][4]);
@@ -232,13 +253,13 @@
 						one+= parseFloat(sales[i][4]);
 					}
 				}
-				
-				
+
+
 			}
-			
+
 			var oneP = 0, twoP = 0, threeP = 0, fourP = 0, fiveP = 0, sixP = 0, sevenP = 0, eightP = 0, nineP = 0, tenP = 0, elevP = 0, twelP = 0;
-			
-			
+
+
 			for(var i = sales.length-1; i >= 0 ; i--) {
 
 				if(sales[i][8] == monthNumber[(setMonth % 12)] ) {
@@ -249,7 +270,7 @@
 						twelP+= parseFloat(sales[i][6]);
 					}
 				}
-				
+
 				if(sales[i][8] == monthNumber[((setMonth - 1) % 12)] ) {
 					if(valueMonth - monthNumber[(setMonth - 1) % 12] >= 0 && sales[i][9] == myDate.getFullYear()) {
 						elevP+= parseFloat(sales[i][6]);
@@ -338,8 +359,8 @@
 						oneP+= parseFloat(sales[i][6]);
 					}
 				}
-				
-				
+
+
 			}
 
 		var myChart = {
@@ -349,16 +370,16 @@
 		    datasets: [{
 		      label: 'Profit',
 		      data: [oneP, twoP, threeP, fourP, fiveP, sixP, sevenP, eightP, nineP, tenP, elevP, twelP],
-		     
+
 		      backgroundColor: "rgba(104, 163, 221, 0.5)"
-		      
+
 		    }, {
 		      label: 'Cost',
 		      data: [one, two, three, four, five, six, seven, eight, nine, ten, elev, twel],
 		      backgroundColor: "rgba(245, 0, 0, 0.5)"
 		    }]
 		  },
-		
+
 		  options: {
 			responsive: true,
             title:{
@@ -391,10 +412,10 @@
             }
 		  }
 		};
-		
+
 		var ctx = document.getElementById('canvas').getContext('2d');
 		var index = new Chart(ctx, myChart);
-		
+
 		var myBarChart = {
 				  type: 'bar',
 				  data: {
@@ -402,9 +423,9 @@
 				    datasets: [{
 				      label: 'Profit',
 				      data: [oneP, twoP, threeP, fourP, fiveP, sixP, sevenP, eightP, nineP, tenP, elevP, twelP],
-				     
+
 				      backgroundColor: "rgba(104, 163, 221, 0.5)"
-				      
+
 				    }, {
 				      label: 'Cost',
 				      data: [one, two, three, four, five, six, seven, eight, nine, ten, elev, twel],
@@ -442,12 +463,17 @@
 			                }]
 			            }
 					  }
-				  
+
 				};
-				
+
 				var ctx = document.getElementById('canvas1').getContext('2d');
 				var index = new Chart(ctx, myBarChart);
+</script>
 
-		</script>
+
+
+
+
+
 	</body>
 </html>

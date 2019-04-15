@@ -111,7 +111,7 @@ body{
 
 #first_row {
 	width: 100%;
-	height: 35%;
+	height: 50%;
 	padding-top: 20px;
 	padding-bottom: 20px;
 }
@@ -186,7 +186,7 @@ body{
 
 #second_row {
 	height: 30%;
-	
+
 }
 
 #Tasks_Panel {
@@ -214,11 +214,11 @@ body{
 	background-color: rgb(244, 112, 112);
 	text-align: center;
 	color: white;
-	
+
 }
 
 .task-list {
-	display: block; 
+	display: block;
 	margin-left: 70px;
 	margin-right: 70px;
 	border: 1px solid gainsboro;

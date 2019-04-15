@@ -1,4 +1,5 @@
 <?php
+$issuepriority = filter_input(INPUT_POST,'issuepriority');
  $username = filter_input(INPUT_POST, 'username');
  $itemcode = filter_input(INPUT_POST, 'itemcode');
  $issuetitle = filter_input(INPUT_POST, 'issuetitle');
@@ -17,10 +18,10 @@ die('Connect Error ('. mysqli_connect_errno() .') '
 . mysqli_connect_error());
 }
 else{
-$sql = "INSERT INTO feedback (name,itemcode,issuetitle,issuedetail,date)
-values ('$username','$itemcode','$issuetitle','$issuedetail','$date')";
+$sql = "INSERT INTO feedback (issuepriority, name,itemcode,issuetitle,issuedetail,date)
+values ('$issuepriority','$username','$itemcode','$issuetitle','$issuedetail','$date')";
 if ($conn->query($sql)){
-echo "New record is inserted sucessfully";
+echo "<h1> Issue Raised Successfully. Kindly Press back to redirect to your previous page ";
 }
 else{
 echo "Error: ". $sql ."
@@ -30,12 +31,12 @@ $conn->close();
 }
 }
 else{
-echo "Password should not be empty";
+echo "Item code should not be empty";
 die();
 }
 }
 else{
-echo "Username should not be empty";
+echo "Name should not be empty";
 die();
 }
 ?>
