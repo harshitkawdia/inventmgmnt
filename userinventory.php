@@ -52,40 +52,130 @@
 			</div>
 			<ul>
 				<li><h2 id="logo">Lab Stock Management</h2></li>
-				<li><a href="sales.php" class="fontsub">Sales</a></li>
-				<li><a href="userinventory.php" class="fontsub">Inventory</a></li>
-					<ul><br>	
-					<li><a href="inventory.php" class="fontsub">Current Stock</a></li>
-					</ul>
+				<li><a href="sales.php">Sales</a></li>
+				<li><a href="userinventory.php">User Inventory</a></li>
 			</ul>
 		</div>
-
 		<div id="block">
+			<div id="main-area">
+				<div id="welcome">
+					<h1 class="fonthead text-light">Welcome <?php echo $login_session; ?></h1>
+				</div>			
+				
+			
+<div class="container">
+	<div class="row">
+		<div class="col-12">
+			<div class="card">
+				<div class="card-header">
+					<h3 class="card-title" style="text-align:center ">Current Stock</h3>
 
-		<div id="main-area">
-			<div id="welcome">
-				<h1 class="fonthead text-light">Welcome <?php echo $login_session; ?></h1>
-					
+					<!--<div class="card-tools">
+						<button id="addBtn" class="btn btn-success" data-toggle="modal" 
+                  				data-target="#addNewModal">Add 
+                  				<i class="fa fa-user-plus fa-fw"></i>
+						</button>
+	
 
-					<div class="row">						
-						<!-- ./col -->
-						<div class="col-lg-3 col-xs-6">
-						  <div class="shadow p-4 mb-4 rounded-lg">
-						  <!-- small box -->
-							<div class="info-box bg-info text-body img-rounded">
-							<h1><a href="inventory.php" ><span class="info-box-icon"><img src="img/available.png"></i></span></a></h1>
-								<div class="info-box-content">
-									<h1> 
-										<a href="inventory.php" class="text-light fontsub box">Current Stock</a>
-									</h1>
-								</div>
-							</div>
-						  </div>
-						</div>				
-						<!-- ./col -->
-					</div>
-					<br>
+						<button class="btn btn-success" data-toggle="modal" 
+                  				data-target="#updateNewModal">Update 
+                  				<i class="fa fa-user-plus fa-fw"></i>
+						</button>
+
+						<button class="btn btn-danger" data-toggle="modal" 
+                  				data-target="#deleteNewModal">Delete 
+                  				<i class="fa fa-user-plus fa-fw"></i>
+						</button>
+
+						<button class="btn btn-primary " style="margin-left:72%" data-toggle="modal" 
+                  				data-target="#updateNewModal">Submit 
+                  				<i class="fa fa-user-plus fa-fw"></i>
+						</button>
+
+					</div>-->
 				</div>
+				<!-- /.card-header -->
+				<div class="card-body table-responsive p-0">
+					<table class="table table-hover">
+						<tr>
+							<th>User ID</th>
+							<th>User Name</th>
+							<th>Eq. Id</th>
+							<th>Eq. Details</th>
+							<th>Issued By</th>
+							<th>Assigned on</th>
+							<th>Issues Raised</th>
+						</tr>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th><button type="button" class="btn btn-success" onclick="feedback.php">Feedback</button></th>
+						<tr>
+							
+						<tr>
+				
+						</table>
+						</div>
+						<!-- /.card-body -->
+						</div>
+						<!-- /.card -->
+						</div>
+						</div><!-- /.row -->
+						</div>
+				
+				
+				<script>
+					// Get the modal
+					var modal = document.getElementsByClassName("modal");
+					
+					// Get the button that opens the modal
+					var btn = document.getElementsByClassName("Btn");
+					
+					// Get the <span> element that closes the modal
+					var span = document.getElementsByClassName("close");
+					
+					// When the user clicks the button, open the modal 
+					btn[0].onclick = function() {
+					    modal[0].style.display = "block";
+					}
+					
+					btn[1].onclick = function() {
+					    modal[1].style.display = "block";
+					}
+					
+					btn[2].onclick = function() {
+					    modal[2].style.display = "block";
+					}
+					
+					
+					// When the user clicks on <span> (x), close the modal
+					span[0].onclick = function() {
+					    modal[0].style.display = "none";
+					}
+					
+					span[1].onclick = function() {
+					    modal[1].style.display = "none";
+					}
+					
+					span[2].onclick = function() {
+					    modal[2].style.display = "none";
+					}
+					
+					// When the user clicks anywhere outside of the modal, close it
+					window.onclick = function(event) {
+					    if (event.target == modal) {
+					        modal.style.display = "none";
+					    }
+					}
+				</script>
+			</div>
+
+			</div>
+		</div>
+				
 			</div>
 		</div>
 	</body>

@@ -53,7 +53,7 @@
 			<ul>
 				<li><h2 id="logo">Lab Stock Management</h2></li>
 				<li><a href="sales.php">Sales</a></li>
-				<li><a href="inventory1.php">Inventory</a></li>
+				<li><a href="inventory1.php">Admin Inventory</a></li>
 					<ul><br>	
 					<li><a href="inventory.php">Current Stock</a></li>
 					<li><a href="inventory.php">Order Placed</a></li>
@@ -62,7 +62,7 @@
 			</ul>
 		</div>
 
-		<div id="block">
+		<div id="block" class="maindiv">
 
 		<div id="main-area">
 			<div id="welcome">
@@ -71,12 +71,12 @@
 
 					<div class="row">						
 						<!-- ./col -->
-						<div class="col-lg-3 col-xs-6">
+						<div class="col-lg-3 col-xs-4 cell">
 						  <div class="shadow p-4 mb-4 rounded-lg">
 						  <!-- small box -->
 							<div class="info-box bg-info text-body img-rounded">
 							<div>
-								<h1><a href="inventory.php" ><span class="info-box-icon"><img src="img/available.png"></i></span></a></h1>
+								<h1><a href="inventory.php" ><span class="info-box-icon box"><img src="img/available.png"></i></span></a></h1>
 							</div>
 								<div class="info-box-content">
 									<h1> 
@@ -87,13 +87,13 @@
 						  </div>
 						</div>
 						<!-- ./col -->
-						<div class="col-lg-3 col-xs-6">
+						<div class="col-lg-3 col-xs-4 cell">
 						  <div class="shadow p-4 mb-4 rounded-lg">
 						  <!-- small box -->
 							<div class="info-box bg-warning text-body img-rounded">
-							<div>
-								<h1><a href="inventory.php" ><span class="info-box-icon"><img src="img/order.png"></i></span></a></h1>
-							</div>
+								<div>   
+									<h1><a href="inventory.php" ><span class="info-box-icon box"><img src="img/order.png"></i></span></a></h1>
+								</div>
 								<div class="info-box-content">
 									<h1> 
 										<a href="inventory.php" class="text-light fontsub box">Order Placed</a>
@@ -104,12 +104,12 @@
 						</div>
 						
 						<!-- ./col -->
-						<div class="col-lg-3 col-xs-6">
+						<div class="col-lg-3 col-xs-4 cell">
 						  <div class="shadow p-4 mb-4 rounded-lg">
 						  <!-- small box -->
 							<div class="info-box bg-danger text-body img-rounded">
 							<div>
-								<h1><a href="inventory.php" ><span class="info-box-icon centre-block font" ><img src="img/deprecated.png"></span></a></h1>
+								<h1><a href="inventory.php" ><span class="info-box-icon box img" ><img src="img/deprecated.png"></span></a></h1>
 							</div>
 								<div class="info-box-content">
 									<h1> 

@@ -48,7 +48,7 @@
 			<ul>
 				<li><h2 id="logo">Lab Stock Management</h2></li>
 				<li><a href="sales.php">Sales</a></li>
-				<li><a href="adminInventory.php">Inventory</a>
+				<li><a href="adminInventory.php">Admin Inventory</a>
 					<ul><br>	
 					<li><a href="inventory.php">Current Stock</a></li>
 					<li><a href="inventory.php">Order Placed</a></li>
