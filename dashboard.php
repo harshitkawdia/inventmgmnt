@@ -60,8 +60,7 @@
 			</div>
 			
 			<ul>
-				<li><h2 id="logo">Inventory Sales Management</h2></li>
-				<li><a href="sales.php">Sales</a></li>
+				<li><h2 id="logo">Lab Stock Management</h2></li>
 				<li><a href="adminInventory.php">Admin Inventory</a></li>
 			</ul>
 			
@@ -73,7 +72,7 @@
 			<div id="main-area">
 				
 				<div id="welcome">
-					<h1>Welcome <?php echo $login_session; ?></h1>	
+					<h1 class="fonthead text-info">Welcome <?php echo $login_session; ?></h1>	
 				</div>
 				
 				<div id="mini_nav">

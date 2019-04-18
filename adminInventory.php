@@ -53,12 +53,14 @@
 			<ul>
 				<li><h2 id="logo">Lab Stock Management</h2></li>
 				<li><a href="sales.php">Sales</a></li>
-				<li><a href="admininventory.php">Admin Inventory</a></li>
+				<li><a href="admininventory.php">Admin Inventory</a>
 					<ul><br>	
-					<li><a href="inventory.php">Current Stock</a></li>
-					<li><a href="inventory.php">Order Placed</a></li>
-					<li><a href="inventory.php">Dead Stock</a></li>
+					<li><a href="currentstock.php">Current Stock</a></li>
+					<li><a href="orderplaced.php">Order Placed</a></li>
+					<li><a href="deadstock.php">Dead Stock</a></li>
 					</ul>
+				</li>
+				<li><a href="users.php">User Details</a></li>
 			</ul>
 		</div>
 
@@ -76,11 +78,11 @@
 						  <!-- small box -->
 							<div class="info-box bg-info text-body img-rounded">
 							<div>
-								<h1><a href="inventory.php" ><span class="info-box-icon box"><img src="img/available.png"></i></span></a></h1>
+								<h1><a href="currentstock.php" ><span class="info-box-icon box"><img src="img/available.png"></i></span></a></h1>
 							</div>
 								<div class="info-box-content">
 									<h1> 
-										<a href="inventory.php" class="text-light fontsub box">Current Stock</a>
+										<a href="currentstock.php" class="text-light fontsub box">Current Stock</a>
 									</h1>
 								</div>
 							</div>
@@ -92,11 +94,11 @@
 						  <!-- small box -->
 							<div class="info-box bg-warning text-body img-rounded">
 								<div>   
-									<h1><a href="inventory.php" ><span class="info-box-icon box"><img src="img/order.png"></i></span></a></h1>
+									<h1><a href="orderplaced.php" ><span class="info-box-icon box"><img src="img/order.png"></i></span></a></h1>
 								</div>
 								<div class="info-box-content">
 									<h1> 
-										<a href="inventory.php" class="text-light fontsub box">Order Placed</a>
+										<a href="orderplaced.php" class="text-light fontsub box">Order Placed</a>
 									</h1>
 								</div>
 							</div>
@@ -109,11 +111,11 @@
 						  <!-- small box -->
 							<div class="info-box bg-danger text-body img-rounded">
 							<div>
-								<h1><a href="inventory.php" ><span class="info-box-icon box img" ><img src="img/deprecated.png"></span></a></h1>
+								<h1><a href="deadstock.php" ><span class="info-box-icon box img" ><img src="img/deprecated.png"></span></a></h1>
 							</div>
 								<div class="info-box-content">
 									<h1> 
-										<a href="inventory.php" class="text-light fontsub box">Dead Stock</a>
+										<a href="deadstock.php" class="text-light fontsub box">Dead Stock</a>
 									</h1>
 								</div>
 							</div>
