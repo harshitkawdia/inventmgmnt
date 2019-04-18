@@ -58,17 +58,18 @@
 					<li><a href="orderplaced.php">Order Placed</a></li>
 					<li><a href="deadstock.php">Dead Stock</a></li>
 					</ul>
-        </li>
-        <li><a href="users.php">User Details</a></li>
+				</li>
 			</ul>
 		</div>
 
-		<div id="block">	
-    <div id="main-area">
-			<div id="welcome">
-				<h1>Welcome <?php echo $login_session; ?></h1>
-				
-        <div class="container">
+		<div id="block">
+			<div id="main-area">
+            <div>
+				<h1 class="card-title fonthead text-light" style="text-align:center ">Dead Stock</h1>
+            </div>
+
+            <div class="container">
+
 				<!-- /.row -->
 				  <div class="row">
             <div class="col-12">
@@ -117,61 +118,67 @@
               </div>
               <!-- /.card -->
             </div>
-				</div><!-- /.row -->
-      </div>
-	  <br>		
-      <div class="container">
-          <button type="button" class="btn btn-primary Btn" id="addBtn" data-toggle="modal" data-target="#addNew">
-            Add New
-          </button>
-          <button type="button" class="btn btn-primary Btn" id="addBtn" data-toggle="modal" data-target="#addNew">
-            Edit
-          </button>
-          <button type="button" class="btn btn-primary Btn" id="addBtn" data-toggle="modal" data-target="#addNew">
-            Delete
-          </button>
-      </div> 
-    </div>
-    </div>
-    <div class="modal fade" id="addNew" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog ">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h4 class="modal-title"id="exampleModalLabel">New User</h4>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span></button>
-                  
-          </div>
-          <form id="submit" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
-                  
-                <div class="modal-body">
-                  <div class="form-group">
-                    <label for="userid">UserId</label>
-                      <input type="text" name="userid" id="userid" placeholder="UserId" class="form-control" >
-                  </div>
-                  <div class="form-group">
-                    <label for="username">UserName</label>
-                      <input type="text" name="username" id="username" placeholder="UserName" class="form-control" >
-                  </div>
-                  <div class="form-group">
-                    <label for="email">Email</label>
-                      <input type="email" name="email" id="email" placeholder="example@example.com" class="form-control" >
-                  </div>
-                  <div class="form-group">
-                    <label for="usertype">UserType</label>
-                    <select name="usertype" id="usertype" class="form-control">
-                      <option value="">Select User Role</option>
-                      <option value="1">Admin</option>
-                      <option value="2">User</option>
-                    </select>
-                  </div>
-                </div>
-                  <div class="modal-footer">
-                          <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
-                          <button type="submit" class="btn btn-primary">Save</button>
-                  </div>
-          </form>
-          <script>
+
+		</div><!-- /.row -->
+  </div>
+
+</div>
+			
+  <div class="container">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addNew">
+ 	        Add New
+        </button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addNew">
+ 	        Edit
+        </button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addNew">
+ 	        Delete
+        </button>
+  </div> 
+</div>
+          <div class="modal fade" id="addNew" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog ">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title"id="exampleModalLabel">New User</h4>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span></button>
+                
+              </div>
+              <form action="" method="post">
+                
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="userid">UserId</label>
+                            <input type="text" name="userid" id="userid"
+                             placeholder="UserId" class="form-control" >
+                        </div>
+                        <div class="form-group">
+                            <label for="username">UserName</label>
+                            <input type="text" name="username" id="username"
+                             placeholder="UserName" class="form-control" >
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email"
+                             placeholder="example@example.com" class="form-control" >
+                        </div>
+                        <div class="form-group">
+                            <label for="usertype">UserType</label>
+                            <select name="usertype" id="usertype" class="form-control">
+                              <option value="">Select User Role</option>
+                              <option value="1">Admin</option>
+                              <option value="2">User</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Save</button>
+                    </div>
+                </form>
+              
+                <script>
 					// Get the modal
 					var modal = document.getElementsByClassName("modal");
 					
@@ -215,13 +222,17 @@
 					    }
 					}
 				</script>
+              
+             </div>
+            <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+          </div>
+          <!-- /.modal -->
 
-        </div>
-        <!-- /.modal-content -->
-      </div>
-      <!-- /.modal-dialog -->
-    </div>
-    <!-- /.modal -->
-			
+				
+			</div>
+		</div>
+
 	</body>
 </html>

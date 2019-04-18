@@ -134,7 +134,7 @@ body{
 }
 
 #welcome {
-	padding-left: 40px;
+	font-size: 40px;
 }
 
 #mini_nav {
@@ -232,13 +232,13 @@ body{
 }
 
   .fontsub{
-	  font-family: arial;
-	  font-size:30;
+	  font-family: lucida;
+	  font-size:30px;
 	  color:  whitesmoke;
   }
   .fonthead{
 	  font-family: broadway;
-	  font-size: 70;
+	  font-size: 70px;
   }
   .box{
 	  padding: 1%;

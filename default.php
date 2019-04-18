@@ -17,7 +17,9 @@ function createTable(){
 	username VARCHAR(255) NOT NULL,
 	password VARCHAR(255) NOT NULL,
 	user_type integer NOT NULL,
-	email VARCHAR(255) NOT NULL
+	email VARCHAR(255) NOT NULL,
+	dept VARCHAR(255) NOT NULL
+
 	)";
 	$conn->query($sql);
 	
@@ -68,7 +70,8 @@ function createAdmin(){
 	$count = mysqli_num_rows($result);
 	// If result matched username, table row must be 1 row		
 	if($count == 0) {
-		$sql = "INSERT INTO user (username, password, user_type,email)
+
+		$sql = "INSERT INTO user (username, password, user_type, email)
 	   	VALUES ('admin', 'admin',1,'admin@gmail.com')";
 		$conn->query($sql);
 		

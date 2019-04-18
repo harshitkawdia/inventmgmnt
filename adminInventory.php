@@ -52,8 +52,14 @@
 			</div>
 			<ul>
 				<li><h2 id="logo">Lab Stock Management</h2></li>
+
 				<li><a href="sales.php">Sales</a></li>
 				<li><a href="admininventory.php">Admin Inventory</a>
+
+				<li><h6 class="fontsub text-light">Welcome <?php echo $login_session; ?></h6></li>
+				<li><a href="dashboard.php">Dashboard</a></li>
+				<li><a href="admininventory.php">Admin Inventory</a></li>
+
 					<ul><br>	
 					<li><a href="currentstock.php">Current Stock</a></li>
 					<li><a href="orderplaced.php">Order Placed</a></li>
@@ -68,7 +74,7 @@
 
 		<div id="main-area">
 			<div id="welcome">
-				<h1 class="fonthead text-light">Welcome <?php echo $login_session; ?></h1>
+				<h1 class="fonthead text-light">Admin Inventory</h1>
 					
 
 					<div class="row">						

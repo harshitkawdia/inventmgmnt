@@ -60,8 +60,13 @@
 			</div>
 			
 			<ul>
-				<li><h2 id="logo">Lab Stock Management</h2></li>
-				<li><a href="adminInventory.php">Admin Inventory</a></li>
+
+        <li><h2 id="logo">Lab Stock Management</h2></li>
+				<li><a href="dashboard.php">Dashboard</a></li>
+				<li><a href="adminInventory.php">Inventory</a></li>
+				<li><a href="users.php">User Details</a></li>
+			
+
 			</ul>
 			
 		</div>
@@ -72,7 +77,9 @@
 			<div id="main-area">
 				
 				<div id="welcome">
-					<h1 class="fonthead text-info">Welcome <?php echo $login_session; ?></h1>	
+
+					<h1 class="fonthead text-light">Welcome <?php echo $login_session; ?></h1>	
+
 				</div>
 				
 				<div id="mini_nav">
@@ -91,10 +98,7 @@
 						<img src="img/chat.png" />
 					</div>
 					
-					<div id="mini_board">
-						<div class = "mini_font"><a href="#">Profile</a></div>
-						<?php echo '<img src="' . $avatar . '"/>';?>
-					</div>
+
 				</div>
 				
 				<div id="first_row">

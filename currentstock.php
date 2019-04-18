@@ -51,15 +51,17 @@
 			<ul>
 				<li><h2 id="logo">Lab Stock Management</h2></li>
 				<li><h6 class="fontsub text-light">Welcome <?php echo $login_session; ?></h6></li>
+
 				<li><a href="dashboard.php">Dashboard</a></li>
 				<li><a href="adminInventory.php">Admin Inventory</a>
 					<ul><br>	
+
 					<li><a href="currentstock.php">Current Stock</a></li>
 					<li><a href="orderplaced.php">Order Placed</a></li>
 					<li><a href="deadstock.php">Dead Stock</a></li>
 					</ul>
-                </li>
-                <li><a href="users.php">User Details</a></li>
+         </li>
+         <li><a href="users.php">User Details</a></li>
 			</ul>
 		</div>
 

@@ -60,6 +60,7 @@
 					</ul>
 				</li>
 				<li><a href="users.php">User Details</a></li>
+
 			</ul>
 		</div>
 
@@ -78,7 +79,9 @@
 							<div class="modal-content">
     							<span class="close">&times;</span>
 								<div class="modal-body">
-									<table>
+
+									<table>	
+
 										<tr><td>Item Name: </td><td><input type="text" placeholder="itemName" name="item"></td></tr>
 										<tr><td>#In-Stock: </td><td><input type="text" placeholder="storage" name="storage"></td></tr>
 										<tr><td>Unit Price: </td><td><input type="text" placeholder="unitPrice" name="unitPrice"></td></tr>

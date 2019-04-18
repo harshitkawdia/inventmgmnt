@@ -16,7 +16,7 @@
       $count = mysqli_num_rows($result);
       $usertype=$row['user_type'];
       // If result matched $myusername and $mypassword, table row must be 1 row
-		
+         
       if($count == 1) {
         $_SESSION['login_user'] = $myusername;
         $_SESSION['login_user_type'] = $usertype;
@@ -24,6 +24,7 @@
         {
             header("location:dashboard.php");
         }
+
         else if($_SESSION['login_user_type']==2)
         {
             header("location:userdashboard.php");
@@ -31,6 +32,7 @@
         else{
          $error = "Invalid Username";  
         }
+
 
       }else {
          $error = "Your Login Name or Password is invalid";

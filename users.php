@@ -60,9 +60,10 @@
 					<li><a href="orderplaced.php">Order Placed</a></li>
 					<li><a href="deadstock.php">Dead Stock</a></li>
 					</ul>
-                </li>
-                <li><a href="users.php">User Details</a></li>
-			</ul>
+         </li>
+         <li><a href="users.php">User Details</a></li>
+				</ul>
+			
 		</div>
 
 	<div id="block">	
@@ -122,6 +123,8 @@
 				</div><!-- /.row -->
   </div>
 	<br>		
+</div>
+			
   <div class="container">
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addNew">
  	        Add New
@@ -134,7 +137,10 @@
         </button>
   </div> 
 </div>
+
 </div>
+
+
           <div class="modal fade" id="addNew" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog ">
             <div class="modal-content">
@@ -176,8 +182,6 @@
                         <button type="submit" class="btn btn-primary">Save</button>
                     </div>
                 </form>
-
-                
 
              </div>
             <!-- /.modal-content -->
