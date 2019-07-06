@@ -52,15 +52,18 @@
 			</div>
 			<ul>
 				<li><h2 id="logo">Lab Stock Management</h2></li>
-				<li><a href="adminInventory.php">Admin Inventory</a></li>
-        <ul><br>	
+				<li><h6 class="fontsub text-light">Welcome <?php echo $login_session; ?></h6></li>
+				<li><a href="dashboard.php">Dashboard</a></li>
+				<li><a href="adminInventory.php">Admin Inventory</a>
+					<ul><br>	
 					<li><a href="currentstock.php">Current Stock</a></li>
 					<li><a href="orderplaced.php">Order Placed</a></li>
 					<li><a href="deadstock.php">Dead Stock</a></li>
 					</ul>
-              <li><a href="users.php">User Details</a></li>
-					</ul>
-			</ul>
+         </li>
+         <li><a href="users.php">User Details</a></li>
+				</ul>
+			
 		</div>
 
 	<div id="block">	
@@ -119,7 +122,7 @@
             </div>
 				</div><!-- /.row -->
   </div>
-
+	<br>		
 </div>
 			
   <div class="container">
@@ -134,6 +137,10 @@
         </button>
   </div> 
 </div>
+
+</div>
+
+
           <div class="modal fade" id="addNew" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog ">
             <div class="modal-content">
@@ -175,6 +182,7 @@
                         <button type="submit" class="btn btn-primary">Save</button>
                     </div>
                 </form>
+
              </div>
             <!-- /.modal-content -->
           </div>

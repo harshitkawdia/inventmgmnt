@@ -7,6 +7,7 @@
       
       $myusername = mysqli_real_escape_string($db,$_POST['username']);
       $mypassword = mysqli_real_escape_string($db,$_POST['password']); 
+     
       
       $sql = "SELECT * FROM user WHERE username = '$myusername' and password = '$mypassword'";
       $result = mysqli_query($db,$sql);
@@ -23,14 +24,16 @@
         {
             header("location:dashboard.php");
         }
-        elseif($_SESSION['login_user_type']==2)
+
+        else if($_SESSION['login_user_type']==2)
         {
             header("location:userdashboard.php");
         }
-        else {
-         $error = "Not valid user";
-         }
-        
+        else{
+         $error = "Invalid Username";  
+        }
+
+
       }else {
          $error = "Your Login Name or Password is invalid";
       }

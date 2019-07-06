@@ -60,6 +60,7 @@
 			</div>
 			
 			<ul>
+
 				<li><h2 id="logo">Lab Stock Management</h2></li>
 				<li><a href="userinventory.php">User Inventory</a></li>
 				<li><a href="userinventory.php">Issue Raised</a></li>
@@ -93,6 +94,7 @@
 						<img src="img/chat.png" />
 					</div>
 					
+
 				</div>
 				
 				<div id="first_row">
