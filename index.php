@@ -64,14 +64,14 @@
 								<?php echo $error; ?>
 							</div>
                         </form>
-                        <div class="social-login">
+<!--                         <div class="social-login">
                             <span class="social-label">Or login with</span>
                             <ul class="socials">
                                 <li><a href="#"><i class="display-flex-center p-2 zmdi zmdi-facebook fa fa-facebook"></i></a></li>
                                 <li><a href="#"><i class="display-flex-center p-2 zmdi zmdi-twitter fa fa-twitter"></i></a></li>
                                 <li><a href="#"><i class="display-flex-center p-2 zmdi zmdi-google fa fa-google"></i></a></li>
                             </ul>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
